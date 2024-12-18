@@ -23,4 +23,4 @@ def tweet_list(request):
         'form': form,
         'tweets': tweets,
     }
-    return render('tweet_list.html', context)
+    return render(request, 'tweets/tweet_list.html', context)

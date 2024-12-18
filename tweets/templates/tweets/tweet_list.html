@@ -1,8 +1,9 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>ツイートアプリ/title>
+    <title>ツイートアプリ</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
@@ -12,14 +13,14 @@
         <!--投稿フォーム-->
         <form method="POST">
             {% csrf_token %}
-            {% form.as_p %}
+            {{ form.as_p }}
             <button type="submit" class="btn btn-primary">ツイートする</button>
         </form>
 
         <hr>
 
         {% if tweets %}
-            {% for tweet in tweet %}
+            {% for tweet in tweets %}
                 <div class="card mb-3">
                     <div class="card-body">
                         <h5 class="card-title">{{ tweet.user.username }}</h5>
