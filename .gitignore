@@ -1,0 +1,11 @@
+# Docker関連
+*.log
+.env
+__pycache__/
+db.sqlite3  # SQLiteを使わない場合でも念のため
+
+# VSCode Dev Container
+.devcontainer/
+
+id_ed25519
+id_ed25519.pub
